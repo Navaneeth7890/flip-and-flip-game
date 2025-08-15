@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip-n-Flip Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4">
+
+    <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2">Flip-n-Flip</h1>
+        <p class="text-lg text-gray-400">Match all the pairs to win!</p>
+    </div>
+
+    <div class="flex items-center justify-center space-x-8 mb-6">
+        <div class="text-center">
+            <p class="text-xl font-semibold">Moves</p>
+            <p id="moves-count" class="text-3xl font-bold">0</p>
+        </div>
+        <div class="text-center">
+            <p class="text-xl font-semibold">Time</p>
+            <p id="timer" class="text-3xl font-bold">0s</p>
+        </div>
+    </div>
+
+    <div id="game-board" class="grid grid-cols-4 gap-4 w-full max-w-md mx-auto mb-6">
+        </div>
+
+    <button id="reset-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+        Reset Game
+    </button>
+    
+    <div id="message-box" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center">
+        <div class="bg-gray-800 rounded-lg p-8 text-center shadow-2xl">
+            <h2 id="message-title" class="text-3xl font-bold mb-4">You Won!</h2>
+            <p id="message-text" class="text-lg mb-6">Congratulations! You completed the game.</p>
+            <button id="message-close-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg">Play Again</button>
+        </div>
+    </div>
+
+</body>
+</html>
